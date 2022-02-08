@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #9e9e9e;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #EDF0F1;
+    text-decoration: none;
+    background-color: #24252A;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #707070;
+    text-decoration: none;
+    font-style: italic;
+    background-color: #24252A;
+}
+
+li, a, button, h3, p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #EDF0F1;
+    text-decoration: none;
+    background-color: #24252A;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 2.5%;
+    background-color: #24252A;
+}
+
+    .logo {
+        cursor: pointer;
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: #24252A;
+    }
+
+    .logo-text {
+        margin-right: auto;
+        background-color: #24252A;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        list-style: none;
+        background-color: #24252A;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        padding: 5px 20px;
+    }
+
+    .nav-links li a {
+        transition: all 0.3s ease 0s;
+        font-weight: bold;
+    }
+
+    .nav-links li a:hover {
+        color: #0088A9;
+    }
+
+/* Button */
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+    button:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+
+/* Banner */
+.banner {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 2.5%;
+    background-color: #24252A;
+}
+
+/* Modal (Background) */
+.popupmodal-background {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	z-index: 50;
+}
+
+/* Modal Content */
+.popupmodal-content {
+background-color: #1c1d26;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 60%;
+border-radius: 5px;
+}
+
+/* */
+.banner-image-square {
+display: flex;
+justify-content: center;
+background-color: #9e9e9e;
+margin: 5px 10px 10px 10px;
+}
+
+/* */
+.banner-image-square > div {
+background-color: #24252A;
+margin: 10px;
+padding: 10px;
+font-size: 30px;
+}
+
+/* */
+.banner-profile-showcase {
+display: flex;
+justify-content: center;
+background-color: #24252A;
+margin: 0px;
+flex-basis: 100px;
+flex-grow: 0;
+}
+
+/* */
+.banner-profile-showcase > div {
+background-color: #24252A;
+margin: 265px 50px 265px 50px;
+padding: 10px;
+font-size: 30px;
+flex-basis: 500px;
+align-items: stretch;
+}
+
+.profile {
+width: 300px;
+height: 300px;
+margin-left: 30%;
+background-color: #24252A;
+}
