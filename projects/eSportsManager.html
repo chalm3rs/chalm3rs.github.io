@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+
+-->
+
+
+<html>
+	<head>
+		<title>Lewis Chalmers - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="icon" href="../images/profile-icon.ico">
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous">
+		</script>
+		<script> 
+			$(function(){
+	  			$("#header").load("../header.html"); 
+	 			$("#footer").load("../footer.html"); 
+			});
+		</script> 
+	</head>
+	<body>
+		<!-- Header -->
+			<div id="header"></div>
+
+		<!-- Slideshow Banner -->
+			<div class="slideshow-banner">
+				<!-- Image 1 -->
+				<div class="mySlides slideshow-fade">
+					<img src="../images/banner-mountain.jpg" style="width:100%">
+					<div class="slideshow-caption-text">Caption 1</div>
+				</div>
+
+				<!-- Image 2 -->
+				<div class="mySlides slideshow-fade">
+					<img src="../images/banner-mountain.jpg" style="width:100%">
+					<div class="slideshow-caption-text">Caption 2</div>
+				</div>
+
+				<!-- Image 3 -->
+				<div class="mySlides slideshow-fade">
+					<img src="../images/banner-mountain.jpg" style="width:100%">
+					<div class="slideshow-caption-text">Caption 3</div>
+				</div>
+				<a class="prev-slide" onclick="changeSlide(-1)">❮</a>
+				<a class="next-slide" onclick="changeSlide(1)">❯</a>
+			</div>
+
+		<!-- Banner Square Images -->
+			<div class="banner-image-square">
+				<div>
+					<img class="banner" src="../images/banner-code.jpg">
+					<h1>eSports Manager</h1>
+					<h2>University Group Project</h2>
+					<a href="#"><button>Learn More</button></a>
+					<br><br>
+					<p>
+						A card game with a unique deck management system.  Explore the world of being an eSports manager, through training, player transfers & so much more.
+						Take your team & become the best competiting in different tournements!
+					</p>
+				</div>
+				
+				<div>
+					<img class="banner" src="../images/banner-code.jpg">
+					<h1>Missions</h1>
+					<h2>Portfolio of Missions in the workplace</h2>
+					<a href="#"><button>Learn More</button></a>
+					<br><br>
+					<p>
+						Take a look at the different missions taken to ensure a successful workplace, including but not limited to:
+						Management, recruitment, staff management, marketing campaigns & sales analysis
+						Find out what had myself into a Manager with a drive!
+					</p>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer"></div>
+
+		<!-- Scripts -->
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function changeSlide(n) {
+			  showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			}
+			</script>
+
+	</body>
+</html>
