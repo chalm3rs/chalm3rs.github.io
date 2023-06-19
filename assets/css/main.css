@@ -35,6 +35,11 @@ li, a, button, h3, p {
     text-decoration: none;
     background-color: #24252A;
 }
+
+u {
+  color: #fff;
+}
+
 /* Header */
 header {
     display: flex;
@@ -269,74 +274,57 @@ img {
     text-align: center;
   }
 
-  .design-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /*background-color: #1f1f1f;*/
-    min-height: 100vh;
-    padding: 100px 0;
-    font-family: Jost;
-  }
-  
-  .design {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .timeline {
-    width: 80%;
-    height: auto;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .timeline-content {
-    padding: 20px;
-    background: #24252A;
-    -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-            box-shadow: 5px 5px 10px #ffffff, -5px -5px 10px #b5abab;
-    border-radius: 5px;
-    color: white;
-    padding: 1.75rem;
-    transition: 0.4s ease;
-    overflow-wrap: break-word !important;
-    margin: 1rem;
+  /* Clear floats after the columns */
+.timeline-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.timeline-column {
+  float: left;
+  width: 50%;
+  padding: 10px 25px 10px 25px;
+}
+
+.timeline-area {
+  margin: 20px;
+  border-left: 2px solid #ccc;
+  padding: 0 0 0 30px;
+}
+  .timeline-area > div {
+    background-color: #24252A;
+    padding: 10px 25px;
+    border: 1px solid #ccc;
+    line-height: 1.7;
+    position: relative;
+    /*height: 110px;*/
     margin-bottom: 20px;
-    border-radius: 6px;
   }
-  
-  .timeline-component {
-    margin: 0px 20px 20px 20px;
+
+  .timeline-area > div::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 136, 169, 1);
+    border: 3px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: -40px;
   }
-  
-  @media screen and (min-width: 768px) {
-    .timeline {
-      display: grid;
-      grid-template-columns: 1fr 3px 1fr;
-    }
-    .timeline-middle {
-      position: relative;
-      background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-      width: 3px;
-      height: 100%;
-    }
-    .main-middle {
-      opacity: 0;
-    }
-    .timeline-circle {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-    }
+
+  .timeline-area > div::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #ddd transparent transparent;
+    border-width: 8px;
+    position: absolute;
+    left: -17px;
+    top: 10px;
   }
+
